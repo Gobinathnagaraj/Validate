@@ -1,0 +1,58 @@
+body{
+    font-style: oblique;
+}
+
+p{
+    font-size: 30px;
+    text-decoration: underline;
+}
+thead,table{ 
+   border-collapse: collapse;
+   border: 1px solid black;
+}
+#email{
+    padding-left: 1em;
+}
+#Age,#a{
+    padding-left: 1em;
+}
+label{
+    float: left;
+}
+html{
+   margin: .5em;
+}
+aside{
+    float: right;
+    font-size: 30px;
+}
+form{
+    margin-top: 1em;
+}
+#name{
+    margin-left: 2em;
+}
+#age{
+    margin-left: 3em;
+}
+#mail{
+    margin-left: 2.25em;
+}
+#pass{
+    margin-left: .6em;
+}
+#rpass{
+    margin-left: 1em;
+}
+#submit{
+    color: white;
+    background-color: green;
+}
+#reset{
+    color: white;
+    background-color:crimson;
+   
+}
+span{
+    color: red;
+}
