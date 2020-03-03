@@ -6,7 +6,10 @@ p{
     font-size: 30px;
     text-decoration: underline;
 }
-thead,table{ 
+a{
+    margin-left: 35em;
+}
+thead,table,th,td{ 
    border-collapse: collapse;
    border: 1px solid black;
 }
@@ -21,6 +24,15 @@ label{
 }
 html{
    margin: .5em;
+}
+input{
+    border: 1px solid black;
+}
+input.ng-not-empty{
+    background-color:lightblue;
+}
+input:required{
+
 }
 aside{
     float: right;

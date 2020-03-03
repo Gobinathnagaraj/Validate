@@ -5,64 +5,61 @@
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
               <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
               <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-              <script src="validate.js"></script>
-
-          </head>
-    
-    <div ng-view></div>
-    <body ng-app="">
-        <div class="container">
+    </head>
+  <body ng-app="myForm">
+      <div ng-view></div>
+              
+<div class="container" ng-app="myForm">
        <p><b>Welcome to the Application Page</b></p>
-       <form method="post" onsubmit="validate.js" id="form">
+       <form method="post" id="form" name="validate">
          <label>Name:</label>
-           <input type="text" placeholder="Enter your name" id="name" required ng-model="name">
+           <input type="text" placeholder="Enter your name" id="name" required ng-model="firstName">
            <span id="error1">*</span><br><br>
          <label>Age:</label>
-           <input type="number" placeholder="Enter your age" id="age" required ng-model="age">
+           <input type="number" placeholder="Enter your age" id="age" min="18" required ng-model="age">
            <span id="error2">*</span><br><br>
          <label>Email:</label>
            <input type="email" placeholder="Enter your mail" id="mail" required ng-model="Mail">
            <span id="error3">*</span><br><br>
          <label>Password:</label>
-            <input type="password" placeholder="Enter Password" required id="pass">
+            <input type="password" placeholder="Enter Password" required id="pass" ng-model="pass">
             <span id="error4">*</span><br><br>
          <label>Re-Enter:</label>
-           <input type="password" placeholder="Re-Enter password" id="rpass">
+           <input type="password" placeholder="Re-Enter password" id="rpass" ng-model="rpass">
             <span id="error5">*</span><br><br>
            <input type="reset" value="Reset" id="reset">
-           <input type="button" value="Submit" id="submit">
+           <input type="button" value="Submit" id="submit" onclick="rfield">
        </form>
-            <main>
-       <aside>
+       <a href="">Click Me..!</a>
+       <main>
+        <aside>
         <table>
-            <thead>
-            <tr>
-                <th><b>Name</b></th>
-                <th id="Age"><b>Age</b></th>
-                <th id="email"><b>Mail</b></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>{{name}}</td>
-               <td id="a">{{age}}</td>
-                <td>{{Mail}}</td>
-            </tr>
-            </tbody>
-        </table>
-      </aside>
-            </main>
-           <a href="#/">Thank You!..</a> 
+             <thead>
+             <tr>
+                 <th><b>Name</b></th>
+                 <th id="Age"><b>Age</b></th>
+                 <th id="email"><b>Mail</b></th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr>
+                 <td>{{firstName}}</td>
+                <td id="a">{{age}}</td>
+                 <td>{{Mail}}</td>
+             </tr>
+             </tbody>
+             </table>
+       </aside>
+             </main>
+             
+      </div>
+    <script>
+        //for validate
+       var app = angular.module('myForm', ['ui.router']);
+        $stateProvider
+        .state{
             
-    </div>
-        <script>
-        /* var app = angular.module("myForm", ["ngRoute"]);
-         app.config(function($routeProvider) {
-             $routeProvider
-             .when('/thank', { 
-                 templateurl : "th.html"
-             });
-         });
+        }
         </script>
-    </body>
+  </body>
 </html>
