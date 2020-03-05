@@ -9,7 +9,7 @@
   <body ng-app="myForm">
       <div ng-view></div>
               
-<div class="container" ng-app="myForm">
+<div class="container">
        <p><b>Welcome to the Application Page</b></p>
        <form method="post" id="form" name="validate">
          <label>Name:</label>
@@ -55,11 +55,11 @@
       </div>
     <script>
         //for validate
-       var app = angular.module('myForm', ['ui.router']);
-        $stateProvider
-        .state{
-            
-        }
+       var app = angular.module('myForm', ['ngRouter']);
+        $routeProvider
+        .when("/" {
+            templateUrl : "main.html"
+        });
         </script>
   </body>
 </html>
